@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">ConnectionAPI</string>
+    <string name="prefecture_name">都道府県名</string>
+    <string name="postal_code">〒郵便番号</string>
+    <string name="title_postal_code">郵便番号</string>
+    <string name="city_name">市区町村名</string>
+    <string name="town_name">町域名</string>
+    <string name="kana_refecture_name">ﾄﾄﾞｳﾌｹﾝﾒｲ</string>
+    <string name="kana_city_name">ｼｸﾁｮｳｿﾝﾒｲ</string>
+    <string name="kana_town_name">ﾁｮｳｲｷﾒｲ</string>
+    <string name="push_btn">Push</string>
+    <string name="input_number">郵便番号を入力してください</string>
 </resources>

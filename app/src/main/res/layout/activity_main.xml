@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:gravity="center"
-        android:text="郵便番号"
+        android:text="@string/title_postal_code"
         android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
     <EditText
@@ -20,9 +20,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
+        android:autofillHints=""
         android:ems="10"
         android:gravity="center"
-        android:inputType="number" />
+        android:hint="@string/input_number"
+        android:inputType="number"
+        tools:targetApi="o" />
 
     <TextView
         android:id="@+id/numTextView"
@@ -30,7 +33,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
         android:gravity="center"
-        android:text="〒郵便番号"
+        android:text="@string/postal_code"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
 
     <LinearLayout
@@ -45,7 +48,7 @@
             android:layout_margin="5dp"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="ﾄﾄﾞｳﾌｹﾝﾒｲ"
+            android:text="@string/kana_refecture_name"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
         <TextView
@@ -55,7 +58,7 @@
             android:layout_margin="5dp"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="ｼｸﾁｮｳｿﾝﾒｲ"
+            android:text="@string/kana_city_name"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
         <TextView
@@ -65,7 +68,7 @@
             android:layout_margin="5dp"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="ﾁｮｳｲｷﾒｲ"
+            android:text="@string/kana_town_name"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
     </LinearLayout>
 
@@ -81,7 +84,7 @@
             android:layout_margin="5dp"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="都道府県名"
+            android:text="@string/prefecture_name"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
         <TextView
@@ -91,7 +94,7 @@
             android:layout_margin="5dp"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="市区町村名"
+            android:text="@string/city_name"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
         <TextView
@@ -101,7 +104,7 @@
             android:layout_margin="5dp"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="町域名"
+            android:text="@string/town_name"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
     </LinearLayout>
@@ -112,6 +115,6 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_margin="10dp"
-        android:text="Push" />
+        android:text="@string/push_btn" />
 
 </LinearLayout>
