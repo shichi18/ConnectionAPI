@@ -1,7 +1,6 @@
 package com.github.shichi18.connectionapi
 
 import android.os.Bundle
-import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
@@ -14,7 +13,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 class MainActivity : AppCompatActivity() {
     //innerクラスだと親クラスのメンバ変数にもアクセスできる
-    // MainActibity内にクラスを作ると便利
+    // MainActivity内にクラスを作ると便利
     inner class ZipApiDataCallback : retrofit2.Callback<ResponseModel> {//Callback<T>を継承
 
         //データ受信時に発生すると呼ばれるメソッド
@@ -22,15 +21,6 @@ class MainActivity : AppCompatActivity() {
             //response.body()がZipApiData本体
             if (response?.body()?.results != null) {
                 if (response.body()!!.results.count() > 0) {
-                    Log.v("nullpo", response.body()!!.results[0].prefcode)
-                    Log.v("nullpo", response.body()!!.results[0].zipcode)
-                    Log.v("nullpo", response.body()!!.results[0].kana1)
-                    Log.v("nullpo", response.body()!!.results[0].kana2)
-                    Log.v("nullpo", response.body()!!.results[0].kana3)
-                    Log.v("nullpo", response.body()!!.results[0].address1)
-                    Log.v("nullpo", response.body()!!.results[0].address2)
-                    Log.v("nullpo", response.body()!!.results[0].address3)
-
                     numTextView.text = response.body()!!.results[0].zipcode
                     addressTextKana1.text = response.body()!!.results[0].kana1
                     addressTextKana2.text = response.body()!!.results[0].kana2
@@ -40,13 +30,15 @@ class MainActivity : AppCompatActivity() {
                     addressText3.text = response.body()!!.results[0].address3
                 }
             } else {
-                Toast.makeText(applicationContext, "存在しない郵便番号です", Toast.LENGTH_LONG).show();
+                Toast.makeText(applicationContext, "存在しない郵便番号です", Toast.LENGTH_LONG).show()
 
             }
         }
 
         //失敗したときに呼ばれるメソッド
         override fun onFailure(call: Call<ResponseModel>?, t: Throwable?) {
+            Toast.makeText(applicationContext, "失敗しました", Toast.LENGTH_LONG).show()
+
         }
     }
 
@@ -70,7 +62,7 @@ class MainActivity : AppCompatActivity() {
                 val service = retrofit.create(APIData::class.java)
                 service.apiDemo(numText).enqueue(ZipApiDataCallback())
             } else {
-                Toast.makeText(applicationContext, "郵便番号は7桁です", Toast.LENGTH_LONG).show();
+                Toast.makeText(applicationContext, "郵便番号は7桁です", Toast.LENGTH_LONG).show()
             }
         }
     }
