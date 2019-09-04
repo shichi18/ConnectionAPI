@@ -12,5 +12,5 @@ http://zipcloud.ibsnet.co.jp
 
 ## Development Environment
 Programming Language：Kotlin  
-Development Environment：AndroidStudio3.5
+Development Environment：AndroidStudio3.5  
 Actual machine check：Android 6.0.1 & Android9.0  
