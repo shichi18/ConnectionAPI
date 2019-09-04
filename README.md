@@ -1,5 +1,5 @@
 # ConnectionAPI
-[Sample+ α] Practice using Rxjava, retrofit and WebAPI (get only)
+[Sample+ α] Practice using RxJava, Retrofit and WebAPI (get only)
 
 ## Feature
 A simple app to get an address from a zip code.
@@ -13,4 +13,4 @@ http://zipcloud.ibsnet.co.jp
 ## Development Environment
 Programming Language：Kotlin  
 Development Environment：AndroidStudio3.5
-Actual machine check Android 6.0.1(Android9 ×)
+Actual machine check：Android 6.0.1 & Android9.0  
