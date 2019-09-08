@@ -1,5 +1,5 @@
 # ConnectionAPI
-[Sample+ α] Practice using RxJava, Retrofit and WebAPI (get only)
+[Sample+ α] Practice using Retrofit and WebAPI (get only)
 
 ## Feature
 A simple app to get an address from a zip code.
