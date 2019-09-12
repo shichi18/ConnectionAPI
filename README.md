@@ -1,6 +1,9 @@
 # ConnectionAPI
 [Sample+ α] Practice using Retrofit and WebAPI (get only)
 
+## icon
+<img src="https://github.com/shichi18/ConnectionAPI/blob/master/app/src/main/ic_launcher-web.png" width=15%>
+
 ## Feature
 A simple app to get an address from a zip code.
 
